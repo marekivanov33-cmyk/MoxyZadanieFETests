@@ -33,13 +33,13 @@ tasks.register('runEshopSuite', Test) {
     group = 'verification'
     description = 'Spustí iba EshopTestSuite'
 
-    // použije JUnit Platform (JUnit 5)
+    // JUnit Platform (JUnit 5)
     useJUnitPlatform()
 
-    // vyberie len túto triedu podľa názvu
+
     include '**/EshopTestSuite.class'
 
-    // (nepovinné) – lepší výstup do konzoly
+    // Logovanie
     testLogging {
         events "passed", "skipped", "failed"
     }
