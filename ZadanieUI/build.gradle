@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Selenium
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.36.0'
+
+    // WebDriverManager
+    testImplementation 'io.github.bonigarcia:webdrivermanager:6.3.2'
+
+    // JUnit 5
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testImplementation 'org.junit.platform:junit-platform-suite:1.11.3'
+    // Hamcrest
+    testImplementation 'org.hamcrest:hamcrest:3.0'
+}
+
+
+test {
+    useJUnitPlatform()
+    include '**/*Test.class'
+}
+
+tasks.register('runEshopSuite', Test) {
+    group = 'verification'
+    description = 'Spustí iba EshopTestSuite'
+
+    // použije JUnit Platform (JUnit 5)
+    useJUnitPlatform()
+
+    // vyberie len túto triedu podľa názvu
+    include '**/EshopTestSuite.class'
+
+    // (nepovinné) – lepší výstup do konzoly
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}

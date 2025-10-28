@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FE_Tests.OrderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-28T20:06:01" hostname="SW107" time="3.224">
+  <properties/>
+  <testcase name="OrderAndPay()" classname="FE_Tests.OrderTest" time="3.224"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[okt 28, 2025 9:06:02 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 141, returning the closest version; found: 140; Please update to a Selenium version that supports CDP version 141
+]]></system-err>
+</testsuite>
