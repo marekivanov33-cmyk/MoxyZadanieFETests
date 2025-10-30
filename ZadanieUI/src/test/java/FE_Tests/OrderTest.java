@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
-//E2E test celého procesu objednavky až po zaplatenie.
+//E2E test celeho procesu objednavky az po zaplatenie.
 
 @Tag(("UITest"))
 public class OrderTest {
@@ -32,8 +32,8 @@ public class OrderTest {
         );
 
         // Overenie ze som na spravnej stranke
-        assertTrue(productsTitle.isDisplayed(), "'Products' title by mal byť viditeľný");
-        assertEquals("https://www.saucedemo.com/inventory.html", driver.getCurrentUrl(), "Nie si na stránke produktov");
+        assertTrue(productsTitle.isDisplayed(), "'Products' title by mal byť viditelny");
+        assertEquals("https://www.saucedemo.com/inventory.html", driver.getCurrentUrl(), "Nie si na stranke produktov");
 
 }
     @Test
@@ -54,3 +54,4 @@ public class OrderTest {
     }
 
 }
+
