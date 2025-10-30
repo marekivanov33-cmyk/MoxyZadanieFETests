@@ -32,8 +32,8 @@ public class AddItemsToCartTest {
         );
 
         // Overenie ze som na spravnej stranke
-        assertTrue(productsTitle.isDisplayed(), "'Products' title by mal byť viditeľný");
-        assertEquals("https://www.saucedemo.com/inventory.html", driver.getCurrentUrl(), "Nie si na stránke produktov");
+        assertTrue(productsTitle.isDisplayed(), "'Products' title by mal byť viditelny");
+        assertEquals("https://www.saucedemo.com/inventory.html", driver.getCurrentUrl(), "Nie si na stranke produktov");
     }
 
     @Test
@@ -54,7 +54,7 @@ public class AddItemsToCartTest {
             driver.findElement(By.id(buttonId)).click();
             expectedCount++;
 
-            // počká, kým sa badge zobrazí alebo zmení
+            // pocka, kym sa zobrazi ikonka v kosiku alebo zmeni
             WebElement cartBadge = wait.until(
                     ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".shopping_cart_badge"))
             );
@@ -64,3 +64,4 @@ public class AddItemsToCartTest {
         }
     }
 }
+
