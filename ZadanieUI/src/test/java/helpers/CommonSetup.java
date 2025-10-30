@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CommonSetup {
 
-    // 🔹 Nastavenie browsera a otvorenie stranky
+    //Nastavenie browsera a otvorenie stranky
     public static WebDriver setUp(String baseUrl) {
         WebDriverManager.chromedriver().setup();
 
@@ -30,7 +30,7 @@ public class CommonSetup {
         return driver;
     }
 
-    // Overenie stranky
+    // Overenie ze som na spravnej stranky
     public static void OverenieStranky(WebDriver driver) {
         String BASE_URL = "https://www.saucedemo.com/";
         assertEquals(BASE_URL, driver.getCurrentUrl(), "Nie si na spravnej URL");
@@ -44,3 +44,4 @@ public class CommonSetup {
         driver.findElement(By.id("login-button")).click();
     }
 }
+
